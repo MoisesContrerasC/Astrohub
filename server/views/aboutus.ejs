@@ -1,0 +1,233 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/mainNav.ejs %>
+
+<style>
+</style>
+
+<main class="container">
+    <h1 class="title">About AstroHub Survey</h1>
+  
+    <section class="section">
+      <h2 class="subTitle">Our Mission</h2>
+      <p class="paragraph">
+        At AstroHub, we are committed to providing a platform for voices to be heard. Our mission is to empower individuals and organizations to discover insights and make informed decisions through comprehensive survey tools and analytics. We are passionate about facilitating meaningful communication and feedback loops between businesses and their audiences.
+      </p>
+    </section>
+  
+    <section class="section">
+      <h2 class="subTitle">Why Choose Us?</h2>
+      <ul class="list">
+        <li>Customizable Surveys: Tailor surveys to fit your specific research needs with our versatile question types and design options.</li>
+        <li>Advanced Analytics: Unlock the power of data with our real-time analytics and reporting tools.</li>
+        <li>User-Centric Design: Experience an intuitive interface that makes creating and taking surveys effortless.</li>
+        <li>Scalability: From small polls to large-scale research projects, our platform scales with your needs.</li>
+        <li>Community Driven: Join a growing community of researchers and participants driving innovation through shared insights.</li>
+      </ul>
+    </section>
+  
+    <section class="section">
+      <h2 class="subTitle">Meet the Team</h2>
+      <ul class="list">
+        <li class="bold">Moises - Project Manager</li>
+        <li class="bold">Devanshi - Frontend Developer</li>
+        <li class="bold">Anand - Backend Developer</li>
+        <li class="bold">Arshil - Frontend Developer</li>
+        <li class="bold">Shivam - Frontend Developer</li>
+      </ul>
+    </section>
+
+    <section class="section">
+        <h2 class="subTitle">Find Us</h2>
+        <p class="paragraph">
+          Visit our campus to learn more about how we can help you gather the insights you need.
+        </p>
+        <!-- Google Map Embed -->
+        <div class="map-container">
+          <iframe
+            width="600"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1440.2004566105375!2d-79.22946192741662!3d43.78529334502013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d0f21fd9078f%3A0x46e3fe92c0cd2b18!2sCentennial%20College!5e0!3m2!1ses-419!2sca!4v1701906570502!5m2!1ses-419!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </section>
+
+      <div id="contact" class="contact-area section-padding">
+        <div class="container">										
+            <div class="section-title text-center">
+                <h1>Get in Touch</h1>
+                <p>Welcome to our contact page. We would love to hear from you. Feel free to reach out through the form or using the contact details below.</p>
+            </div>					
+            <div class="row">
+                <div class="col-lg-7">	
+                    <div class="contact">
+                        <form class="form" name="enq" method="post" action="contact.php" onsubmit="return validation();">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" name="email" class="form-control" placeholder="Email" required="required">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" value="Send message" name="submit" id="submitButton" class="btn btn-contact-bg" title="Submit Your Message!">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div><!--- END COL --> 
+                <div class="col-lg-5">
+                    <div class="single_address">
+                        <i class="fa fa-map-marker"></i>
+                        <h4>Our Address</h4>
+                        <p>123 Default Street N, Scarborough</p>
+                    </div>
+                    <div class="single_address">
+                        <i class="fa fa-envelope"></i>
+                        <h4>Send your message</h4>
+                        <p>Info@astrohub.com</p>
+                    </div>
+                    <div class="single_address">
+                        <i class="fa fa-phone"></i>
+                        <h4>Call us on</h4>
+                        <p>(+1) 123-456-7891</p>
+                    </div>				
+                </div><!--- END COL --> 
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->	
+    </div>
+    <style>
+        body {
+    margin-top: 20px;
+    background: #eee;
+}
+
+.contact-area {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0; /* Adjust padding as needed */
+}
+
+.contact {
+    margin-bottom: 30px;
+}
+
+.contact input,
+.contact textarea {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #232434;
+    font-size: 16px;
+    height: 50px;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border: 1px solid #7564e5;
+    outline: 0;
+}
+
+.form-control::placeholder {
+    color: #232434;
+    opacity: 1;
+}
+
+.btn-contact-bg {
+    border-radius: 30px;
+    color: #fff;
+    padding: 15px 27px;
+    text-transform: capitalize;
+    background: #7564e5;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    border: none;
+}
+
+.btn-contact-bg:hover,
+.btn-contact-bg:focus {
+    background: #232434;
+}
+
+/* START ADDRESS */
+
+.single_address {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.single_address i {
+    background: #f6f6f6;
+    color: #7564e5;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    float: left;
+    margin-right: 14px;
+    font-size: 22px;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.single_address:hover i {
+    background: #7564e5;
+    color: #fff;
+}
+
+.single_address h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.single_address p {
+    margin: 0;
+}
+
+.section-title h1 {
+    font-size: 44px;
+    font-weight: 500;
+    margin-top: 0;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    padding: 0 10px;
+    width: 70%;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    margin-bottom: 30px;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+    </style>
+</main>
+
+<%- include partials/footer.ejs %>
